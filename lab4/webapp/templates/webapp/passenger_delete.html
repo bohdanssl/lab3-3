@@ -1,0 +1,10 @@
+<h1>Delete Passenger?</h1>
+
+<p>Are you sure you want to delete {{ passenger.first_name }} {{ passenger.last_name }}?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Confirm</button>
+</form>
+
+<a href="{% url 'passenger_list' %}">Cancel</a>
