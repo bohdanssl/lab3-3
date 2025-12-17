@@ -1,0 +1,16 @@
+<h1>Passengers</h1>
+
+<a href="{% url 'passenger_add' %}">Add Passenger</a>
+
+<ul>
+    {% for p in passengers %}
+        <li>
+            <a href="{% url 'passenger_detail' p.id %}">
+                {{ p.first_name }} {{ p.last_name }}
+            </a>
+
+            | <a href="{% url 'passenger_delete' p.id %}">Delete</a>
+            
+        </li>
+    {% endfor %}
+</ul>

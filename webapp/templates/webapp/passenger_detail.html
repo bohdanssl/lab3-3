@@ -1,0 +1,13 @@
+<h1>{{ passenger.first_name }} {{ passenger.last_name }}</h1>
+
+<p>Passport: {{ passenger.passport }}</p>
+<p>Military: {{ passenger.is_military }}</p>
+<p>Student: {{ passenger.is_student }}</p>
+<p>Kid: {{ passenger.is_kid }}</p>
+
+<a href="{% url 'passenger_edit' passenger.id %}">Edit</a>
+
+<a href="{% url 'passenger_delete' passenger.id %}">Delete</a>
+
+
+<a href="{% url 'passenger_list' %}">Back to list</a>
